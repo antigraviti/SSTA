@@ -1,0 +1,43 @@
+{
+  "expo": {
+    "name": "BackPal",
+    "slug": "backpal-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "backgroundColor": "#0a0a1a"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.thermalcare.backpal",
+      "infoPlist": {
+        "NSBluetoothAlwaysUsageDescription": "BackPal needs Bluetooth to communicate with your therapy device.",
+        "NSBluetoothPeripheralUsageDescription": "BackPal needs Bluetooth to communicate with your therapy device."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#0a0a1a"
+      },
+      "package": "com.thermalcare.backpal",
+      "permissions": [
+        "android.permission.BLUETOOTH",
+        "android.permission.BLUETOOTH_ADMIN",
+        "android.permission.BLUETOOTH_CONNECT",
+        "android.permission.BLUETOOTH_SCAN",
+        "android.permission.ACCESS_FINE_LOCATION"
+      ]
+    },
+    "plugins": [
+      [
+        "react-native-ble-plx",
+        {
+          "isBackgroundEnabled": false,
+          "modes": ["peripheral", "central"]
+        }
+      ]
+    ]
+  }
+}
